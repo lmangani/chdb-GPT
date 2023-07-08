@@ -4,10 +4,15 @@
 Generate chDB and ClickHouse queries using natural language with ChatGPT/OpenAI APIs
 
 ### Status
-* Hallucinating Toy
+* Just a toy, hallucinating
+* Needs more ClickHouse arguments
+* Needs more Schema and Function Examples
 * Do not use this!
 
 ### Usage
 ```
 python3 promtp.py "count rows from file data.csv"
+```
+```sql
+SELECT count(*) FROM file('data.json')
 ```
