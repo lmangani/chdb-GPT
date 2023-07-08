@@ -4,9 +4,8 @@
 Generate chDB and ClickHouse queries using natural language with ChatGPT/OpenAI APIs
 
 ### Status
-* Just a toy, hallucinating
-* Needs more ClickHouse arguments
-* Needs more Schema and Function Examples
+* Just a toy, hallucinating states 🐍
+* Needs Prompt fine tuning and hacks
 * Do not use this!
 
 ### Requirements
