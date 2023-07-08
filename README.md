@@ -9,8 +9,12 @@ Generate chDB and ClickHouse queries using natural language with ChatGPT/OpenAI 
 * Needs more Schema and Function Examples
 * Do not use this!
 
+### Requirements
+* `OPENAI_API_KEY` 
+
 ### Usage
-```
+```bash
+export OPENAI_API_KEY {your_openai_token_here}
 python3 promtp.py "count rows from file data.csv"
 ```
 ```sql
