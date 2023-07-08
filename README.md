@@ -10,13 +10,27 @@ Generate chDB and ClickHouse queries using natural language with ChatGPT/OpenAI 
 * Do not use this!
 
 ### Requirements
-* `OPENAI_API_KEY` 
-
-### Usage
+* `OPENAI_API_KEY`
 ```bash
 export OPENAI_API_KEY {your_openai_token_here}
+```
+
+### Usage
+#### Count local files
+```bash
 python3 promtp.py "count rows from file data.csv"
 ```
 ```sql
-SELECT count(*) FROM file('data.json')
+SELECT count(*) FROM file('data.csv')
+```
+#### URL Engine, Parquet
+```bash
+python3 promtp.py "show the top 10 towns from url https://datasets-documentation.s3.eu-west-3.amazonaws.com/house_parquet/house_0.parquet" 
+```
+```sql
+SELECT town, COUNT(*) AS count
+FROM url('https://datasets-documentation.s3.eu-west-3.amazonaws.com/house_parquet/house_0.parquet', 'Parquet')
+GROUP BY town
+ORDER BY count DESC
+LIMIT 10;
 ```
