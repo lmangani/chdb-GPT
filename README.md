@@ -22,6 +22,15 @@ python3 promtp.py "count rows from file data.csv"
 ```sql
 SELECT count(*) FROM file('data.csv')
 ```
+```
+# python3 -m chdb "$(./prompt.py "count rows from file data.csv" | awk -v FS="(sql|\`\`\`)" '{print $1}')" Pretty
+┏━━━━━━━━━┓
+┃ count() ┃
+┡━━━━━━━━━┩
+│       2 │
+└─────────┘
+```
+
 #### URL Engine, Parquet
 ```bash
 python3 promtp.py "show the top 10 towns from url https://datasets-documentation.s3.eu-west-3.amazonaws.com/house_parquet/house_0.parquet" 
