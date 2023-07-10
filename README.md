@@ -3,6 +3,8 @@
 # chdb-GPT
 Generate chDB and ClickHouse queries using natural language with ChatGPT/OpenAI APIs
 
+👉 [Run & Clone on Google Colab](https://colab.research.google.com/drive/1pXdgOsgfuY-8Li-vJd3ZvJI08iCOapWY?usp=sharing)
+
 ### Status
 * Just a toy, hallucinating states 🐍
 * Needs Prompt fine tuning and hacks
