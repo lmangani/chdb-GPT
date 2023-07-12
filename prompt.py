@@ -29,7 +29,7 @@ def build_query_prompt(schema_details,query):
     I would like you to generate an accurate ClickHouse sql query for the question: 
     {query}
 
-    - Make sure the query is ClickHouse compatiable
+    - Make sure the query is ClickHouse compatible
     - Make sure ClickHouse SQL and ClickHouse functions are used
     - Assume there are no tables in memory, data is always remote
     - Load data from files using the file() ClickHouse function, for instance: file('data.csv')
