@@ -24,14 +24,6 @@ python3 promtp.py "count rows from file data.csv"
 ```sql
 SELECT count(*) FROM file('data.csv')
 ```
-```
-# python3 -m chdb "$(./prompt.py "count rows from file data.csv" | awk -v FS="(sql|\`\`\`)" '{print $1}')" Pretty
-┏━━━━━━━━━┓
-┃ count() ┃
-┡━━━━━━━━━┩
-│       2 │
-└─────────┘
-```
 
 #### URL Engine, Parquet
 ```bash
@@ -44,3 +36,14 @@ GROUP BY town
 ORDER BY count DESC
 LIMIT 10;
 ```
+
+#### ⚠️ Pipe query to chdb
+```
+# python3 -m chdb "$(./prompt.py "count rows from file data.csv" | awk -v FS="(sql|\`\`\`)" '{print $1}')" Pretty
+┏━━━━━━━━━┓
+┃ count() ┃
+┡━━━━━━━━━┩
+│       2 │
+└─────────┘
+```
+
