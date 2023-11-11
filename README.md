@@ -47,3 +47,18 @@ LIMIT 10;
 └─────────┘
 ```
 
+#### Interactive Mode
+
+```bash
+# python3 interactive.py 
+
+Hi, I'm chdbGPT, an AI assistant that can execute ClickHouse SQL queries for you.
+
+What would you like to know? => show the top 10 towns by price from url https://datasets-documentation.s3.eu-west-3.amazonaws.com/house_parquet/house_0.parquet
+
+The query returned data for 10 towns. The towns are listed in descending order of price.
+The town with the highest price is London, with a price of 337,000,000.
+The remaining towns are also in London, with prices ranging from 315,000,000 to 160,000,000.
+
+```
+
